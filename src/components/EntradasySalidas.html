@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Entradas y Salidas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    header {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .user-profile {
+      display: flex;
+      align-items: center;
+    }
+
+    .user-image {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .user-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .user-name {
+      margin: 0;
+    }
+
+    .btn {
+      background-color: #fff;
+      color: #007bff;
+      border: none;
+      padding: 5px 10px;
+      margin-top: 5px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .btn:hover {
+      background-color: #e6e6e6;
+    }
+
+    nav {
+      background-color: #f8f9fa;
+      padding: 10px;
+      overflow-y: auto;
+    }
+
+    .menu {
+      list-style: none;
+      padding: 0;
+    }
+
+    .menu li {
+      margin: 10px 0;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #007bff;
+    }
+
+    .menu a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .entry-exit-registration {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .entry-exit-registration h2 {
+      margin-top: 0;
+    }
+
+    .entry-exit-registration form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .entry-exit-registration label {
+      margin-bottom: 5px;
+    }
+
+    .entry-exit-registration input, .entry-exit-registration select {
+      margin-bottom: 15px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .entry-exit-registration button {
+      padding: 10px;
+      background-color: #28a745;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .entry-exit-registration button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="user-profile">
+        <img src="user-image.jpg" alt="Imagen de Usuario" class="user-image">
+        <div class="user-info">
+          <p class="user-name">Nombre de Usuario</p>
+          <button class="btn contact-btn">Contacto</button>
+          <button class="btn logout-btn">Salir</button>
+        </div>
+      </div>
+    </header>
+    <nav>
+      <ul class="menu">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Productos</a></li>
+        <li><a href="#">Registrar Productos</a></li>
+        <li><a href="#">Productos de Baja</a></li>
+        <li><a href="#">Lista de Productos</a></li>
+        <li><a href="#">Usuarios</a></li>
+        <li><a href="#">Reportes</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section class="entry-exit-registration">
+        <h2>Registrar Entradas y Salidas</h2>
+        <form>
+          <label for="product-name">Nombre del Producto:</label>
+          <input type="text" id="product-name" required>
+
+          <label for="quantity">Cantidad:</label>
+          <input type="number" id="quantity" required>
+
+          <label for="date">Fecha:</label>
+          <input type="date" id="date" required>
+
+          <label for="type">Tipo de Movimiento:</label>
+          <select id="type" required>
+            <option value="">Selecciona el Tipo</option>
+            <option value="entrada">Entrada</option>
+            <option value="salida">Salida</option>
+          </select>
+
+          <button type="submit">Registrar</button>
+        </form>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
